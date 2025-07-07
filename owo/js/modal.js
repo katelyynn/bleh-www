@@ -9,21 +9,21 @@ function create_window(title, text, actions, id, icon = '', html_header = false,
 
     if (html_header)
         em.innerHTML = (`
-        <header>
-            ${title}${icon_txt}
-        </header>
-        <main>
-            ${text}
-        </main>
+            <header>
+                ${title}${icon_txt}
+            </header>
+            <main>
+                ${text}
+            </main>
         `);
     else
         em.innerHTML = (`
-        <header>
-            <h5>${title}</h5>${icon_txt}
-        </header>
-        <main>
-            ${text}
-        </main>
+            <header>
+                <h5>${title}</h5>${icon_txt}
+            </header>
+            <main>
+                ${text}
+            </main>
         `);
 
     let em_foot = document.createElement('footer');
@@ -50,7 +50,9 @@ function create_window(title, text, actions, id, icon = '', html_header = false,
         em_foot.appendChild(btn);
     }
 
-    em.appendChild(em_foot);
+    if (actions.length > 0)
+        em.appendChild(em_foot);
+
     document.getElementById('hook_windows').appendChild(em);
     lucide.createIcons();
 }
