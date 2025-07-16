@@ -68,32 +68,83 @@
         .browser-choices {
             margin-top: var(--card-gap);
             display: flex;
-            gap: var(--card-gap);
+            flex-direction: column;
+            gap: 10px;
+
+            & + .browser-choices {
+                margin-top: 10px;
+            }
         }
 
         .browser {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+            justify-content: unset;
+            gap: 10px;
             flex: 1;
-            min-width: 230px;
-        }
-        .browser-icon {
-            width: 32px !important;
-            height: 32px;
-            margin: 6px 0;
+            width: 100%;
+
+            --padding: 15px 15px;
+            --shadow: none;
+            --shadow-hov: none;
+
+            img,
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: #fff;
+            }
+
+            .info {
+                display: flex;
+                gap: 10px;
+                flex: 1;
+                text-align: left;
+
+                :first-child {
+                    flex: 1;
+                }
+
+                .also {
+                    color: hsl(var(--c3));
+                }
+            }
+
+            &.popular {
+                --bg: hsl(var(--h3));
+                --bg-hov: hsla(var(--h3), 80%);
+                --bg-atv: hsla(var(--h3), 60%);
+                --col: hsl(var(--ovr, var(--b7)));
+
+                .also {
+                    color: inherit;
+                    opacity: 0.75;
+                }
+
+                img,
+                svg {
+                    fill: inherit;
+                }
+            }
         }
 
         .alert {
-            padding: 7px 12px;
+            padding: var(--card-gap);
             background-color: hsl(var(--h4), 20%);
             color: hsl(var(--l2-c));
             --hue: -2;
             --sat: 1;
             --lit: 1;
 
-            margin-top: 15px;
+            margin-top: var(--card-gap);
             border-radius: var(--item-big-radius);
+
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            cursor: default;
+        }
+
+        h1, h2, h3, h4, h5, p {
+            cursor: default;
         }
 
         .window {
