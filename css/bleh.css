@@ -133,7 +133,7 @@ figcaption {
     display: flex;
     position: relative;
     width: 600px;
-    aspect-ratio: 375 / 225;
+    aspect-ratio: 3 / 2;
 }
 .has-gallery .icon-btn {
     position: absolute;
