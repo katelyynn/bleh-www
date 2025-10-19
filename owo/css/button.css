@@ -4,14 +4,17 @@
     gap: 6px;
 }
 
-
 .toggle,
 .btn {
-    --bg: hsl(var(--b4));
-    --bg-hov: hsla(var(--b4), 80%);
-    --bg-atv: hsla(var(--b4), 60%);
+    --bg: var(--cards-overlay-image-subtlest, none), hsl(var(--b3));
+    --bg-hov:
+        var(--cards-overlay-image-subtlest, none),
+        color-mix(in hsl, hsl(var(--b6)), hsl(var(--b3)) 80%);
+    --bg-atv:
+        var(--cards-overlay-image-subtlest, none),
+        color-mix(in hsl, hsl(var(--b6)), hsl(var(--b3)) 60%);
     --col: hsl(var(--c2));
-    --shadow: var(--interact-shadow);
+    --shadow: var(--normal-shadow), var(--interact-shadow);
     --shadow-hov: var(--active-shadow);
     --indent: 0.98;
     padding: var(--padding, 7px 12px);
@@ -20,9 +23,9 @@
     align-items: center;
     gap: 6px;
     width: fit-content;
-    background-color: var(--bg);
+    background: var(--bg);
     color: var(--col);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight);
     box-shadow: var(--shadow);
     border-radius: var(--radius, var(--item-big-radius));
     cursor: pointer;
@@ -33,10 +36,9 @@
     font-size: var(--font-size);
     line-height: var(--line-height);
 
-    transition-property: background-color, transform, box-shadow, color;
+    transition-property: background, transform, box-shadow, color;
     transition-duration: var(--trans);
     transition-timing-function: var(--trans-function);
-
 
     &.brand {
         --padding: 10px 14px;
@@ -54,23 +56,29 @@
 
 .toggle:hover,
 .btn:hover {
-    background-color: var(--bg-hov);
+    background: var(--bg-hov);
     transition: none;
 }
 .toggle:active,
 .btn:active {
-    background-color: var(--bg-atv);
+    background: var(--bg-atv);
 }
-
 
 .toggle[aria-checked="true"],
 .btn.primary {
-    --bg: hsl(var(--h3));
-    --bg-hov: hsla(var(--h3), 80%);
-    --bg-atv: hsla(var(--h3), 60%);
+    --bg: var(--cards-overlay-image-subtlest, none), hsl(var(--h3)) !important;
+    --bg-hov:
+        var(--cards-overlay-image-subtlest, none),
+        color-mix(in hsl, hsl(var(--h4)), hsl(var(--h3)) 80%) !important;
+    --bg-atv:
+        var(--cards-overlay-image-subtlest, none),
+        color-mix(in hsl, hsl(var(--h4)), hsl(var(--h3)) 60%) !important;
     --col: hsl(var(--ovr, var(--b7)));
-    --shadow: inset hsl(var(--l2-c)) 0 -1px 0, var(--interactable-outer);
-    --shadow-hov: inset hsl(var(--l2-c)) 0 -1px 0, var(--interactable-outer), var(--interactable-active-outer);
+    --shadow:
+        var(--primary-shadow), 0 3px 12px hsl(var(--h4), 32%),
+        var(--interactable-outer);
+    --shadow-hov: var(--interactable-outer), var(--interactable-active-outer);
+    font-weight: var(--font-weight-bold);
 }
 
 .btn.outline {

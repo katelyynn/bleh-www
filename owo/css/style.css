@@ -2,15 +2,19 @@
     owo
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
 
 /* we need to make the vertical alignment better in this font */
 @font-face {
-    font-family: 'Overpass';
-    src: url('https://katelyynn.github.io/bleh/fonts/overpass-ext.woff2') format('woff2');
+    font-family: "Overpass";
+    src: url("https://katelyynn.github.io/bleh/fonts/overpass-ext.woff2")
+        format("woff2");
     font-weight: 100 900;
     font-style: normal;
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
     ascent-override: 90%;
     descent-override: 25%;
     line-gap-override: 0%;
@@ -18,11 +22,15 @@
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('https://katelyynn.github.io/bleh/fonts/overpass.woff2') format('woff2');
+    font-family: "Overpass";
+    src: url("https://katelyynn.github.io/bleh/fonts/overpass.woff2")
+        format("woff2");
     font-weight: 100 900;
     font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
     ascent-override: 90%;
     descent-override: 25%;
     line-gap-override: 0%;
@@ -30,11 +38,15 @@
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('https://katelyynn.github.io/bleh/fonts/overpass-ext-italic.woff2') format('woff2');
+    font-family: "Overpass";
+    src: url("https://katelyynn.github.io/bleh/fonts/overpass-ext-italic.woff2")
+        format("woff2");
     font-weight: 100 900;
     font-style: italic;
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    unicode-range:
+        U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+        U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+        U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
     ascent-override: 90%;
     descent-override: 25%;
     line-gap-override: 0%;
@@ -42,11 +54,15 @@
 }
 
 @font-face {
-    font-family: 'Overpass';
-    src: url('https://katelyynn.github.io/bleh/fonts/overpass-italic.woff2') format('woff2');
+    font-family: "Overpass";
+    src: url("https://katelyynn.github.io/bleh/fonts/overpass-italic.woff2")
+        format("woff2");
     font-weight: 100 900;
     font-style: italic;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    unicode-range:
+        U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+        U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+        U+2212, U+2215, U+FEFF, U+FFFD;
     ascent-override: 90%;
     descent-override: 25%;
     line-gap-override: 0%;
@@ -59,20 +75,26 @@
     --lit: var(--lightness, 1);
     --ovr: var(--invert-btn, var(--b7));
 
-    --font: Overpass, Ubuntu Sans, Spline Sans, Inter, Roboto, Noto Sans, Noto Sans JP, Noto Color Emoji, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-code: Spline Sans Mono, Iosevka, JetBrains Mono, Roboto Mono, monospace;
+    --sat-bg: 1;
+
+    --font:
+        Overpass, Ubuntu Sans, Spline Sans, Inter, Roboto, Noto Sans,
+        Noto Sans JP, Noto Color Emoji, -apple-system, BlinkMacSystemFont,
+        sans-serif;
+    --font-code:
+        Spline Sans Mono, Iosevka, JetBrains Mono, Roboto Mono, monospace;
     --font-size: 14px;
     --line-height: calc(var(--font-size) + 4px);
     --font-size-sm: 12px;
     --line-height-sm: calc(var(--font-size-sm) + 4px);
 
-    --font-weight: 440;
-    --font-weight-medium: 570;
-    --font-weight-bold: 760;
+    --font-weight: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
 
     --trans-short: 0.2s;
     --trans: 0.1s;
-    --trans-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    --trans-function: cubic-bezier(0.61, 0.36, 0.1, 0.93);
 }
 
 /* backgrounds */
@@ -81,20 +103,38 @@
 .badge, .tag-mono, .tag,
 .status-dot, .status,
 /* lfm */ .install,
-.panel
-{
+.panel {
     /* any additional highlights */
-    --b3: var(--hue), calc(var(--sat) * 6%), 28%;
+    --b2: var(--hue), calc(var(--sat) * 6% * var(--sat-bg, 1)), 40%;
+    --b3: var(--hue), calc(var(--sat) * 6% * var(--sat-bg, 1)), 30%;
 
     /* card border */
-    --b4: var(--hue), calc(var(--sat) * 8%), 22%;
+    --b4: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 26%;
 
     /* card */
-    --b5: var(--hue), calc(var(--sat) * 10%), 15%;
+    --b5: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 18%;
 
     /* root */
-    --b6: var(--hue), calc(var(--sat) * 14%), 10%;
+    --b6: var(--hue), calc(var(--sat) * 4% * var(--sat-bg, 1)), 14%;
     --b7: 0, 0%, 0%;
+
+    --card-border: inset 0 0 0 1px hsla(var(--b4), 0.6);
+    --card-border-base: hsl(var(--b3), 0.7);
+    --card-border-base-highlight: hsl(var(--b2), 0.55);
+
+    --normal-shadow:
+        inset 0 1px 0 0 hsl(var(--b2), 80%),
+        inset 0 -30px 6px -20px hsl(var(--b2), 40%);
+    --input-shadow:
+        inset 0 -1px 0 0 hsl(var(--b3), 70%),
+        inset 0 1px 2px hsl(var(--b7), 0.2);
+    --focused-input-shadow:
+        inset 0 -1px 0 0 hsl(var(--h3), 50%),
+        inset 0 -1px 0 0 hsl(var(--b3), 70%),
+        inset 0 1px 2px hsl(var(--b7), 0.2);
+    --group-shadow:
+        inset 0 1px 0 0 hsl(var(--b2), 0.3),
+        inset 0 0 0 1px hsl(var(--b3), 0.35);
 }
 
 /* text */
@@ -108,40 +148,51 @@
 strong,
 .badge,
 .sub,
-.alert
-{
-    --c1: var(--hue), calc(var(--sat) * 40%), 100%;
-    --c2: var(--hue), calc(var(--sat) * 60%), 90%;
-    --c3: var(--hue), calc(var(--sat) * 10%), 60%;
+.alert {
+    --c1: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 40%), 100%;
+    --c2: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 30%), 87%;
+    --c3: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 7%), 60%;
     --ov-c1: var(--c1);
 
     --l2: var(--hue), calc(var(--sat) * 50%), calc(var(--lit) * 83%);
     --l3: var(--hue), calc(var(--sat) * 60%), calc(var(--lit) * 70%);
     --l4: var(--hue), calc(var(--sat) * 70%), calc(var(--lit) * 50%);
 
-    --l2-c: var(--hue), calc(var(--sat) * 50%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 83%);
-    --l3-c: var(--hue), calc(var(--sat) * 60%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 70%);
-    --l4-c: var(--hue), calc(var(--sat) * 70%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 50%);
+    --l2-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(1.5)) * 40%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 83%);
+    --l3-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(1.5)) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 70%);
+    --l4-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(1.5)) * 55%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 55%);
 
     --h2: var(--l2-c);
     --h3: var(--l3-c);
     --h4: var(--l4-c);
 
     --icon: var(--c2);
-}
 
+    --primary-shadow:
+        inset 0 1px 0 0 hsl(var(--h2), 80%),
+        inset 0 -30px 10px -20px hsla(var(--h2), 55%);
+    --bar-shadow: inset 0 1px 0 0 hsla(var(--h3), 25%);
+}
 
 /* attributes */
 :root {
     --card-padding: 20px;
     --card-radius: var(--item-big-radius);
-    --card-shadow: hsla(var(--b7), 0.25) 0 2px 4px 0;
+    --card-shadow: 0 8px 35px rgba(0, 0, 0, 0.45);
     --card-gap: 15px;
     --card-border: unset;
 
     --cards-main-width: 902px; /* this makes it not 777, the grid looks better okay */
     --cards-sidebar-width: 400px;
-    --cards-width: calc(var(--cards-main-width) + var(--cards-sidebar-width) + var(--card-gap));
+    --cards-width: calc(
+        var(--cards-main-width) + var(--cards-sidebar-width) + var(--card-gap)
+    );
 
     --item-small-radius: 5px;
     --item-med-radius: 8px;
@@ -155,7 +206,9 @@ strong,
     --shout-avatar-size: 52px;
     --shout-inset: 52px;
 
-    --menu-shadow: 2px 2px 24px 0 hsla(var(--b7), 0.35), 3px 6px 48px 16px hsla(var(--b7), 0.25);
+    --menu-shadow:
+        2px 2px 24px 0 hsla(var(--b7), 0.35),
+        3px 6px 48px 16px hsla(var(--b7), 0.25);
     --menu-overlay-shadow: 0 -250px 10px 100px hsla(var(--b6), 70%);
     --avatar-shadow: 3px 6px 15px 10px hsla(var(--b7), 0.05);
     --standout-shadow: 3px 6px 32px 16px hsla(var(--b7), 0.2);
@@ -164,20 +217,61 @@ strong,
     --interactable-active-outer: hsla(var(--c1), 0.03) 0 2px 25px 0;
 
     --interact-shadow: var(--interactable-outer);
-    --active-shadow: var(--interactable-outer), var(--interactable-active-outer);
+    --active-shadow:
+        var(--interactable-outer), var(--interactable-active-outer);
 
     --chartlist-fill: var(--hue-gradient, hsl(var(--l3)));
 
-    --gradient-lesbian: linear-gradient(to right, rgb(213, 44, 0), rgb(226, 150, 136), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(210, 127, 164), rgb(162, 2, 98));
-    --gradient-trans: linear-gradient(to right, rgb(85, 205, 252), rgb(179, 157, 233), rgb(247, 168, 184), rgb(246, 216, 221), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(246, 216, 221), rgb(247, 168, 184), rgb(179, 157, 233), rgb(85, 205, 252));
-    --gradient-fluid: linear-gradient(to right, rgb(255, 120, 166), rgb(247, 196, 210), rgb(255, 255, 255) 23%, rgb(255, 255, 255), rgb(255, 255, 255) 28%, rgb(219, 148, 213), rgb(190, 20, 215), rgb(89, 22, 85), rgb(0, 0, 0) 73%, rgb(0, 0, 0), rgb(0, 0, 0) 78%, rgb(51, 36, 87), rgb(50, 60, 191));
+    --gradient-lesbian: linear-gradient(
+        to right,
+        rgb(213, 44, 0),
+        rgb(226, 150, 136),
+        rgb(255, 255, 255) 45%,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255) 55%,
+        rgb(210, 127, 164),
+        rgb(162, 2, 98)
+    );
+    --gradient-trans: linear-gradient(
+        to right,
+        rgb(85, 205, 252),
+        rgb(179, 157, 233),
+        rgb(247, 168, 184),
+        rgb(246, 216, 221),
+        rgb(255, 255, 255) 45%,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255) 55%,
+        rgb(246, 216, 221),
+        rgb(247, 168, 184),
+        rgb(179, 157, 233),
+        rgb(85, 205, 252)
+    );
+    --gradient-fluid: linear-gradient(
+        to right,
+        rgb(255, 120, 166),
+        rgb(247, 196, 210),
+        rgb(255, 255, 255) 23%,
+        rgb(255, 255, 255),
+        rgb(255, 255, 255) 28%,
+        rgb(219, 148, 213),
+        rgb(190, 20, 215),
+        rgb(89, 22, 85),
+        rgb(0, 0, 0) 73%,
+        rgb(0, 0, 0),
+        rgb(0, 0, 0) 78%,
+        rgb(51, 36, 87),
+        rgb(50, 60, 191)
+    );
 }
 
-
-[data-theme="light"], [time-of-day="morning"], [time-of-day="afternoon"] {
+[data-theme="light"],
+[time-of-day="morning"],
+[time-of-day="afternoon"] {
     --card-shadow: hsla(var(--b7), 0.05) 0 2px 4px 0;
 
-    --menu-shadow: 2px 2px 24px 0 hsla(var(--b7), 0.15), 3px 6px 48px 16px hsla(var(--b7), 0.03);
+    --menu-shadow:
+        2px 2px 24px 0 hsla(var(--b7), 0.15),
+        3px 6px 48px 16px hsla(var(--b7), 0.03);
 
     --interact-shadow: hsla(var(--b7), 0.07) 0 2px 4px 0;
 }
@@ -190,8 +284,7 @@ strong,
     /* lfm */ .install,
     .panel, .btn,
     .kate-icon
-)
-{
+) {
     /* card border */
     --b4: var(--hue), calc(var(--sat) * 6%), 89%;
 
@@ -214,8 +307,7 @@ strong,
     strong,
     .badge,
     .sub
-)
-{
+) {
     --c1: var(--hue), calc(var(--sat) * 6%), 0%;
     --c2: var(--hue), calc(var(--sat) * 4%), 4%;
     --c3: var(--hue), calc(var(--sat) * 10%), 30%;
@@ -225,19 +317,31 @@ strong,
     --l3: var(--hue), calc(var(--sat) * 50%), calc(var(--lit) * 55%);
     --l4: var(--hue), calc(var(--sat) * 60%), calc(var(--lit) * 25%);
 
-    --l2-c: var(--hue), calc(var(--sat) * 40%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 63%);
-    --l3-c: var(--hue), calc(var(--sat) * 50%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 55%);
-    --l4-c: var(--hue), calc(var(--sat) * 60%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 25%);
+    --l2-c:
+        var(--hue), calc(var(--sat) * 40%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 63%);
+    --l3-c:
+        var(--hue), calc(var(--sat) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 55%);
+    --l4-c:
+        var(--hue), calc(var(--sat) * 60%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 25%);
 
-    --h3: var(--hue), calc(var(--sat) * 50%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 80%);
-    --h4: var(--hue), calc(var(--sat) * 60%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 65%);
+    --h3:
+        var(--hue), calc(var(--sat) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 80%);
+    --h4:
+        var(--hue), calc(var(--sat) * 60%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 65%);
 }
 
-
-[data-theme="oled"], [time-of-day="night"] {
+[data-theme="oled"],
+[time-of-day="night"] {
     --card-shadow: hsla(var(--b7), 0.05) 0 2px 4px 0;
 
-    --menu-shadow: 2px 2px 24px 0 hsla(var(--b7), 0.15), 3px 6px 48px 16px hsla(var(--b7), 0.03);
+    --menu-shadow:
+        2px 2px 24px 0 hsla(var(--b7), 0.15),
+        3px 6px 48px 16px hsla(var(--b7), 0.03);
 
     --interact-shadow: hsla(var(--b7), 0.07) 0 2px 4px 0;
 }
@@ -250,8 +354,7 @@ strong,
     /* lfm */ .install,
     .panel, .btn,
     .kate-icon
-)
-{
+) {
     /* card border */
     --b4: var(--hue), calc(var(--sat) * 8%), 8%;
 
@@ -274,8 +377,7 @@ strong,
     strong,
     .badge,
     .sub
-)
-{
+) {
     --c1: var(--hue), calc(var(--sat) * 40%), 100%;
     --c2: var(--hue), calc(var(--sat) * 60%), 90%;
     --c3: var(--hue), calc(var(--sat) * 10%), 60%;
@@ -283,8 +385,12 @@ strong,
     --l3: var(--hue), calc(var(--sat) * 50%), calc(var(--lit) * 75%);
     --l4: var(--hue), calc(var(--sat) * 60%), calc(var(--lit) * 45%);
 
-    --l3-c: var(--hue), calc(var(--sat) * 50%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 70%);
-    --l4-c: var(--hue), calc(var(--sat) * 60%), calc(clamp(min(0.5), var(--lit), max(1.5)) * 45%);
+    --l3-c:
+        var(--hue), calc(var(--sat) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 70%);
+    --l4-c:
+        var(--hue), calc(var(--sat) * 60%),
+        calc(clamp(min(0.5), var(--lit), max(1.5)) * 45%);
 
     --h2: var(--l2-c);
     --h3: var(--l3-c);
@@ -292,9 +398,6 @@ strong,
 
     --icon: var(--c2);
 }
-
-
-
 
 /*     BASIC STYLES     */
 body {
@@ -310,7 +413,7 @@ body {
     overflow-x: hidden;
 }
 body:before {
-    content: '';
+    content: "";
     inset: 0;
     position: fixed;
     z-index: 100000000000;
@@ -336,7 +439,11 @@ body:before {
     color: hsl(var(--l3-c));
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: var(--font-weight-bold);
     color: hsl(var(--c1));
     user-select: none;
@@ -374,25 +481,22 @@ h5 {
     gap: var(--card-gap);
 }
 
-
 img {
     user-select: none;
 }
-
 
 /* indent on click */
 :is(
     .btn,
     .chip,
-    [type="radio"], [type="checkbox"],
+    [type="radio"],
+    [type="checkbox"],
     .card:not(.has-footer),
     .install2,
     .toggle
-):active
-{
+):active {
     transform: scale(var(--indent));
 }
-
 
 /* links */
 a:not(:is(.btn, .card)) {
@@ -402,11 +506,10 @@ a:not(:is(.btn, .card)) {
     text-underline-offset: 3px;
 }
 
-
-strong, em {
+strong,
+em {
     font-weight: var(--font-weight-bold);
 }
-
 
 .sep {
     width: 100%;
@@ -418,7 +521,6 @@ strong, em {
     width: 100%;
     height: var(--gap);
 }
-
 
 footer:not(.window footer) {
     margin-top: 240px;
@@ -464,7 +566,6 @@ footer:not(.window footer) {
     }
 }
 
-
 /* icon */
 svg.icon {
     width: var(--w);
@@ -500,7 +601,6 @@ svg.icon {
     --w: 48px;
 }
 
-
 .text-12 {
     font-size: 12px;
     line-height: 16px;
@@ -518,7 +618,6 @@ svg.icon {
     line-height: 22px;
 }
 
-
 .figure {
     display: flex;
     width: 100%;
@@ -528,7 +627,6 @@ svg.icon {
     border-radius: 20px;
     box-shadow: var(--menu-shadow);
 }
-
 
 .caption:not(.browser .caption) {
     margin-top: var(--card-gap);
@@ -549,9 +647,6 @@ svg.icon {
     border-radius: var(--item-small-radius);
 }
 
-
-
-
 /*     header     */
 body {
     padding-top: calc(40px + var(--card-gap));
@@ -568,7 +663,7 @@ header:not(.window header) {
     padding: var(--card-gap) 0;
 
     &:before {
-        content: '';
+        content: "";
         position: fixed;
         left: 0;
         top: 0;

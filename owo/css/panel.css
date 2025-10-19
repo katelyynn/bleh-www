@@ -7,7 +7,8 @@
     padding-top: var(--card-gap);
 }
 
-.panel-container > section, .panel-container.double > div > section {
+.panel-container > section,
+.panel-container.double > div > section {
     z-index: 2;
 }
 
@@ -15,7 +16,8 @@
     padding: var(--card-padding);
     background-color: var(--card-background, hsl(var(--b5)));
     backdrop-filter: var(--card-filter, none);
-    border: var(--card-border);
+    border: 1px solid var(--card-border-base);
+    border-top: 1px solid var(--card-border-base-highlight);
     border-radius: var(--card-radius);
     box-shadow: var(--card-shadow);
 }
@@ -31,10 +33,12 @@
     justify-content: stretch;
     gap: var(--card-gap);
 }
-.panel-container > .main, .main > .panel {
+.panel-container > .main,
+.main > .panel {
     width: var(--cards-main-width);
 }
-.panel-container > .sidebar, .sidebar > .panel {
+.panel-container > .sidebar,
+.sidebar > .panel {
     width: var(--cards-sidebar-width);
 }
 
@@ -46,7 +50,6 @@
 .panel-container > section {
     width: var(--cards-width);
 }
-
 
 .panel-container.double {
     flex-direction: row;
