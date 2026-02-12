@@ -1,0 +1,42 @@
+.icon {
+    --w: 40px;
+    width: var(--w);
+    height: var(--w);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: hsl(var(--h4), 30%);
+    color: hsl(var(--l3-c));
+
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.icon_large {
+    --w: 50px;
+}
+
+.feature {
+    display: flex;
+    gap: 10px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    color: hsl(var(--c1));
+    font-weight: var(--font-weight-medium);
+    cursor: default;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
