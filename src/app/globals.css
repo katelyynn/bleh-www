@@ -1,42 +1,258 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-html,
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+	line-height: 1;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+body {
+    --font: Funnel Sans, Lucida Grande, Geneva, Arial, Verdana, sans-serif;
+    --font-size: 14px;
+    --line-height: calc(var(--font-size) + 4px);
+
+    --font-weight: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+
+    --content-width: 1000px;
+
+    --noise: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuZGV2L3N2Z2pzIiB2aWV3Qm94PSIwIDAgNzAwIDcwMCIgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiPjxkZWZzPjxmaWx0ZXIgaWQ9Im5ubm9pc2UtZmlsdGVyIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHByaW1pdGl2ZVVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJsaW5lYXJSR0IiPg0KCTxmZVR1cmJ1bGVuY2UgdHlwZT0idHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC4xMDIiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjE1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0idHVyYnVsZW5jZSI+PC9mZVR1cmJ1bGVuY2U+DQoJPGZlU3BlY3VsYXJMaWdodGluZyBzdXJmYWNlU2NhbGU9IjE1IiBzcGVjdWxhckNvbnN0YW50PSIwLjc1IiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmctY29sb3I9IiM2ZTZlNmUiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgaW49InR1cmJ1bGVuY2UiIHJlc3VsdD0ic3BlY3VsYXJMaWdodGluZyI+DQogICAgCQk8ZmVEaXN0YW50TGlnaHQgYXppbXV0aD0iMyIgZWxldmF0aW9uPSIxMDAiPjwvZmVEaXN0YW50TGlnaHQ+DQogIAk8L2ZlU3BlY3VsYXJMaWdodGluZz4NCiAgDQo8L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI3MDAiIGZpbGw9IiM2ZTZlNmUiIGZpbHRlcj0idXJsKCNubm5vaXNlLWZpbHRlcikiPjwvcmVjdD48L3N2Zz4=");
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
+body {
+    font-family: var(--font);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: var(--font-weight);
+
+    background-color: hsl(var(--b6));
+    color: hsl(var(--c2));
     color-scheme: dark;
-  }
+    accent-color: hsl(var(--l3-c));
+
+    --hue: var(
+        --hue-over,
+        var(--hue-album, var(--hue-user, var(--hue-seasonal, 255)))
+    );
+    --sat: var(
+        --sat-over,
+        var(--sat-album, var(--sat-user, var(--sat-seasonal, 1)))
+    );
+    --lit: var(
+        --lit-over,
+        var(--lit-album, var(--lit-user, var(--lit-seasonal, 1)))
+    );
+
+    --trans-short: 0.2s;
+    --trans: 0.2s;
+    --trans-function: cubic-bezier(0.095, 0.410, 0.055, 0.960);
+    --trans-function-ani: cubic-bezier(0.205, 0.060, 0.050, 0.965);
+
+    &:after {
+        content: "";
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 9999999999999999999;
+        pointer-events: none;
+        opacity: var(--noise-opacity, 0.35);
+        mix-blend-mode: soft-light;
+        background-image: var(--noise);
+        background-repeat: repeat;
+        background-size: 128px;
+    }
+}
+
+body {
+    /* any additional highlights */
+    --b2: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 29%;
+    --b3: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 19%;
+
+    /* card border */
+    --b4: var(--hue), calc(var(--sat) * 6% * var(--sat-bg, 1)), 14%;
+
+    /* card */
+    --b5: var(--hue), calc(var(--sat) * 6% * var(--sat-bg, 1)), 9%;
+
+    /* root */
+    --b6: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 6%;
+    --b8: var(--hue), calc(var(--sat) * 5% * var(--sat-bg, 1)), 11%;
+    --b7: 0, 0%, 0%;
+}
+
+body {
+    --c1: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 40%), 100%;
+    --c2: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 30%), 87%;
+    --c3: var(--hue), calc(clamp(min(0), var(--sat), max(1)) * 7%), 60%;
+    --ov-c1: var(--c1);
+
+    --l2: var(--hue), calc(var(--sat) * 50%), calc(var(--lit) * 83%);
+    --l3: var(--hue), calc(var(--sat) * 60%), calc(var(--lit) * 70%);
+    --l4: var(--hue), calc(var(--sat) * 70%), calc(var(--lit) * 50%);
+
+    --l2-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 40%),
+        calc(clamp(min(0.8), var(--lit), max(2)) * 82%);
+    --l3-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(2)) * 70%);
+    --l3-c-sat: calc(clamp(min(0), var(--sat), max(2)) * 50%);
+    --l3-c-lit: calc(clamp(min(0.5), var(--lit), max(2)) * 70%);
+    --l4-c:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 55%),
+        calc(clamp(min(0.5), var(--lit), max(2)) * 55%);
+
+    --h2: var(--l2-c);
+    --h3: var(--l3-c);
+    --h3-s: var(--hue), 50%, 70%;
+    --h3-sat: calc(clamp(min(0), var(--sat), max(2)) * 60%);
+    --h3-lit: calc(clamp(min(0.5), var(--lit), max(2)) * 70%);
+    --h4: var(--l4-c);
+    --f4:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 40%),
+        calc(clamp(min(0.8), var(--lit), max(2)) * 42%);
+    --k4: var(--f4);
+    --g4:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 60%),
+        calc(clamp(min(0.5), var(--lit), max(2)) * 15%);
+
+    --s3:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 50%),
+        calc(clamp(min(0.5), var(--lit), max(1)) * 63%);
+    --s4:
+        var(--hue), calc(clamp(min(0), var(--sat), max(2)) * 55%),
+        calc(clamp(min(0.5), var(--lit), max(1.1)) * 56%);
+
+    --p3: var(--s3);
+
+    /* l2-c in dark modes, l4-c in light modes */
+    --l2-c-theme-switch: var(--l2-c);
+    --l3-c-theme-switch: var(--l3-c);
+    --h3-theme-switch: var(--h3);
+
+    --grid-colour-shadow: var(
+        --grid-colour-shadow-override,
+        0 24px 20px hsl(var(--h4), 10%)
+    );
+
+    --opposite-text: var(--b6);
+
+    --avatar-generic-background: linear-gradient(
+        180deg,
+        hsla(var(--h3), 20%) 0%,
+        hsl(var(--b6)) 100%
+    );
+    --avatar-generic-background: hsl(var(--b4));
+
+    --primary-shadow:
+        inset 0 1px 0 0 hsl(var(--h2), 70%),
+        inset 0 -30px 6px -30px hsla(var(--h2), 55%);
+    --bar-shadow: inset 0 1px 0 0 hsla(var(--h3), 25%);
+
+    --shout-vote-indicator: linear-gradient(
+        90deg,
+        transparent 20%,
+        hsl(var(--h4), 5%)
+    );
+
+    --glow: hsl(var(--h3), 40%);
+
+    --badge: hsl(var(--f4), 30%);
+    --badge-hov: hsl(var(--f4), 50%);
+
+    --g-red: hsl(8, 62%, 80%);
+    --g-orange: hsl(24, 86%, 80%);
+    --g-yellow: hsl(44, 100%, 80%);
+    --g-green: hsl(163, 100%, 80%);
+    --g-blue: hsl(199, 79%, 80%);
+    --g-indigo: hsl(254, 46%, 80%);
+
+    --taste-glow: drop-shadow(0 0 15px hsl(var(--h4)));
+}
+
+::selection {
+    background: hsla(var(--h4), 30%);
+    color: hsl(var(--l3-c));
+}
+::-moz-selection {
+    background: hsla(var(--h4), 30%);
+    color: hsl(var(--l3-c));
+}
+
+h1, h2, h3 {
+    color: hsl(var(--c1));
+    font-weight: var(--font-weight-medium);
+
+    cursor: default;
+}
+
+p {
+    cursor: default;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: var(--font-weight-bold);
+}
+
+.brand {
+    font-family: Darumadrop One, var(--font);
+    font-weight: 900;
+}
+
+.accented {
+    color: hsl(var(--l3-c));
+}
+
+h2 {
+    font-size: 16px;
+    line-height: 20px;
 }

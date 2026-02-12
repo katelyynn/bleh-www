@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+    gap: 10px;
+    width: var(--content-width);
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
