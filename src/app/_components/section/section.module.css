@@ -11,5 +11,5 @@
 }
 
 .section:not(.alternate) + .section:not(.alternate) {
-    margin-top: -40px;
+    padding-top: 0;
 }

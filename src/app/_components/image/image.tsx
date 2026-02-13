@@ -9,7 +9,7 @@ interface ImageProps {
 }
 
 export function Image({
-    round = true,
+    round = false,
     shrink = false,
     src,
     alt

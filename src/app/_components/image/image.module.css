@@ -15,9 +15,9 @@
 
 .round {
     border-radius: 14px;
-    overflow: hidden;
 
     img {
         border-radius: inherit;
+        box-shadow: var(--avatar-shadow);
     }
 }

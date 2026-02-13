@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import styles from "./wizard.module.css";
 import { Button, ButtonRow } from "../button/button";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { BrowserListHelper } from "../browser/browser";
 
 interface InstallWizardProps {
     children: React.ReactNode
@@ -21,6 +22,7 @@ export function InstallWizard({
             body:
                 <>
                     <p>If you aren’t sure, go with Chrome - it’s a safe bet.</p>
+                    <BrowserListHelper />
                 </>
         },
         {

@@ -23,7 +23,7 @@ export function Slides({
         <div className={styles.slides}>
             <Slide autoplay={true} arrows={false} indicators={true} canSwipe={true} transitionDuration={400} duration={10000} easing="cubic" prevArrow={<Button>back</Button>} nextArrow={<Button>next</Button>}>
                 {images.map((image, i) => <div className={styles.slide} key={i}>
-                    <Image src={image.src} alt={image.alt} />
+                    <Image src={image.src} alt={image.alt} round />
                     <p className={styles.alt}>{image.alt}</p>
                 </div>)}
             </Slide>
