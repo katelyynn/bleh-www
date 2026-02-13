@@ -44,6 +44,11 @@
     width: fit-content;
     text-decoration: none;
     user-select: none;
+
+    &[disabled] {
+        opacity: 0.6;
+        pointer-events: none;
+    }
 }
 
 .sponsor {

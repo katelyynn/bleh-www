@@ -61,5 +61,19 @@
         --w: 24px;
         width: var(--w);
         height: var(--w);
+
+        &[alt="Tampermonkey"] {
+            filter: invert(1);
+        }
     }
+}
+
+.notice {
+    margin-top: 80px;
+    cursor: default;
+
+    padding: 20px;
+    background-color: hsl(var(--f4), 20%);
+    border-radius: 14px;
+    color: hsl(var(--l2-c));
 }

@@ -44,7 +44,7 @@ export function BrowserListHelper({
     ];
 
     const browser = browserName;
-    let standardised_browser = "";
+    let standardised_browser: browserKey = "chrome";
 
     const chrome = isChrome(browser);
     const firefox = isFirefox(browser);
@@ -110,7 +110,7 @@ export function BrowserListHelper({
 }
 
 type BrowserProps = {
-    browser: string
+    browser: browserKey
 } & ComponentPropsWithoutRef<"button">;
 
 function Browser({
@@ -121,6 +121,103 @@ function Browser({
         <button className={styles.browser} {...props}>
             <img src={`/${browser}.svg`} alt={browser} />
             {browser.charAt(0).toUpperCase() + browser.slice(1)}
+        </button>
+    )
+}
+
+interface ExtensionListProps {
+    browser: string,
+    selectedExtension: string,
+    setSelectedExtension: Function,
+    setStep: Function
+}
+
+type browserKey = "chrome" | "firefox" | "safari";
+
+interface ExtensionItemProps {
+    name: string,
+    url: string
+}
+
+export function ExtensionList({
+    browser,
+    selectedExtension,
+    setSelectedExtension,
+    setStep
+}: ExtensionListProps) {
+    const extensions: Record<browserKey, ExtensionItemProps[]> = {
+        chrome: [
+            {
+                name: "Tampermonkey",
+                url: "https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+            },
+            {
+                name: "ScriptCat",
+                url: "https://chromewebstore.google.com/detail/scriptcat/ndcooeababalnlpkfedmmbbbgkljhpjf"
+            },
+            {
+                name: "Violentmonkey",
+                url: "https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag"
+            }
+        ],
+        firefox: [
+            {
+                name: "Violentmonkey",
+                url: "https://addons.mozilla.org/firefox/addon/violentmonkey"
+            },
+            {
+                name: "Tampermonkey",
+                url: "https://addons.mozilla.org/firefox/addon/tampermonkey"
+            }
+        ],
+        safari: [
+            {
+                name: "Tampermonkey",
+                url: "https://apps.apple.com/us/app/tampermonkey/id6738342400"
+            }
+        ]
+    };
+
+    const notice = {
+        chrome: "Unless you are using the Helium browser, Chrome has heavily locked down on userscript options. Violentmonkey will not work on regular Chrome browsers.",
+        firefox: "Violentmonkey is the open source option, Tampermonkey is closed source.",
+        safari: "There is a payment for this userscript extension on iOS, however on macOS, simply install Chrome or Firefox and head back to this site!"
+    }
+
+    return (
+        <>
+            <div className={styles.list}>
+                {extensions[browser].map((e, i) => <Extension extension={e} browser={browser} key={i} onClick={() => setExtension(e)} />)}
+            </div>
+            <div className={styles.notice}>
+                {notice[browser]}
+            </div>
+        </>
+    )
+
+    function setExtension(extension: ExtensionItemProps) {
+        setSelectedExtension(extension.name);
+        window.open(extension.url, "_blank");
+        setStep(2);
+    }
+}
+
+type ExtensionProps = {
+    extension: ExtensionItemProps,
+    browser: browserKey
+} & ComponentPropsWithoutRef<"button">;
+
+function Extension({
+    extension,
+    browser,
+    ...props
+}: ExtensionProps) {
+    const svg = extension.name.toLowerCase() == "tampermonkey" ? "svg" : "png";
+
+    return (
+        <button className={styles.browser} {...props}>
+            <img src={`/${extension.name.toLowerCase()}.${svg}`} alt={extension.name} />
+            {extension.name}
         </button>
     )
 }
