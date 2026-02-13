@@ -9,3 +9,7 @@
     border-top: 1px solid hsl(var(--b3));
     border-bottom: 1px solid hsl(var(--b3));
 }
+
+.section:not(.alternate) + .section:not(.alternate) {
+    margin-top: -40px;
+}
