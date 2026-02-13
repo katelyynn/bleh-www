@@ -1,4 +1,4 @@
-import { IconBadgesFilled, IconBlocks, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLanguage, IconLanguageHiragana, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
+import { IconBadgesFilled, IconBlocks, IconBrush, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLanguage, IconLanguageHiragana, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
 import { Brand } from "./_components/brand/brand";
 import { Card, Content, SideLeft, SideRight } from "./_components/content/content";
 import { Feature, FeatureIcon, FeatureList } from "./_components/feature/feature";
@@ -98,14 +98,14 @@ export default function Home() {
             <Section>
                 <Card>
                     <Content column={false} outer>
-                        <SideLeft span>
+                        <SideLeft>
                             <Content>
                                 <FeatureIcon icon={IconDisc} large />
                                 <h2>Reduce visual clutter</h2>
                                 <p>Guest features and song tags are <em>automatically detected and treated</em> to let you focus on the actual music.<br />The <em>capitalisation of titles</em> can also be corrected via community contributions with bleh’s own system.</p>
                             </Content>
                         </SideLeft>
-                        <SideRight>
+                        <SideRight span>
                             <Content>
                                 <Image src={'/tracks.webp'} alt="Reduce visual clutter" shrink />
                             </Content>
@@ -116,17 +116,35 @@ export default function Home() {
             <Section>
                 <Card>
                     <Content column={false} outer>
-                        <SideLeft>
+                        <SideLeft span>
                             <Content>
-                                <Image src={'/express.webp'} alt="Keep the conversation going" shrink />
+                                <Image src={'/banner.webp'} alt="Make your profile feel home" shrink round />
                             </Content>
                         </SideLeft>
-                        <SideRight span>
+                        <SideRight>
+                            <Content>
+                                <FeatureIcon icon={IconBrush} large />
+                                <h2>Make your profile feel home</h2>
+                                <p>Apply a <em>banner image of your choosing</em> across the top of your profile visible to any other bleh users.<br />Additionally, customise your <em>display name, profile accent colour, badges</em>, and more by sponsoring the project.</p>
+                            </Content>
+                        </SideRight>
+                    </Content>
+                </Card>
+            </Section>
+            <Section>
+                <Card>
+                    <Content column={false} outer>
+                        <SideLeft>
                             <Content>
                                 <FeatureIcon icon={IconMessage2} large />
                                 <h2>Keep the conversation going</h2>
                                 <p>Express yourself with native <em>Markdown integration</em> in shoutboxes and profile descriptions, including <em>images, line breaks, timestamps, text formatting</em> etc.<br />Additionally, see <em>shoutbox previews</em> return on music pages to get a snippet of what’s being discussed at the moment.</p>
                             </Content>
+                        </SideLeft>
+                        <SideRight span>
+                            <Content>
+                                <Image src={'/express.webp'} alt="Keep the conversation going" shrink />
+                            </Content>
                         </SideRight>
                     </Content>
                 </Card>
@@ -136,14 +154,14 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft span>
                             <Content>
-                                <FeatureIcon icon={IconLayout2Filled} large />
-                                <h2>Collage your music</h2>
-                                <p>Say goodbye to requiring external tools for <em>making album collages</em>, bleh has it covered. You can generate with preset timestamps (for now) for <em>artists, albums, and even tracks</em>.<br />You can even pick <em>a specific size</em> in width and height you’re after.</p>
+                                <Image src={'/collage.webp'} alt="Collage your music" shrink round />
                             </Content>
                         </SideLeft>
                         <SideRight>
                             <Content>
-                                <Image src={'/collage.webp'} alt="Collage your music" shrink round />
+                                <FeatureIcon icon={IconLayout2Filled} large />
+                                <h2>Collage your music</h2>
+                                <p>Say goodbye to requiring external tools for <em>making album collages</em>, bleh has it covered. You can generate with preset timestamps (for now) for <em>artists, albums, and even tracks</em>.<br />You can even pick <em>a specific size</em> in width and height you’re after.</p>
                             </Content>
                         </SideRight>
                     </Content>
@@ -154,14 +172,14 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft>
                             <Content>
-                                <Image src={'/close_friends.webp'} alt="Stay connected" shrink />
+                                <FeatureIcon icon={IconUsersGroup} large />
+                                <h2>Stay connected</h2>
+                                <p>Add people as <em>close friends</em> to keep updated on their recent listening.<br />Select one as a special <em>‘starred friend’</em> to view their scrobbles alongside yours everywhere.</p>
                             </Content>
                         </SideLeft>
                         <SideRight span>
                             <Content>
-                                <FeatureIcon icon={IconUsersGroup} large />
-                                <h2>Stay connected</h2>
-                                <p>Add people as <em>close friends</em> to keep updated on their recent listening.<br />Select one as a special <em>‘starred friend’</em> to view their scrobbles alongside yours everywhere.</p>
+                                <Image src={'/close_friends.webp'} alt="Stay connected" shrink />
                             </Content>
                         </SideRight>
                     </Content>
@@ -172,14 +190,14 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft span>
                             <Content>
-                                <FeatureIcon icon={IconMusicPlus} large />
-                                <h2>Scrobble on the go</h2>
-                                <p>Connect your account to <em>scrobble on-site</em>, no externals required.<br />Additionally, navigate to someones page and hit <em>‘copy’ to clone the scrobble</em> with no extra typing required.</p>
+                                <Image src={'/scrobble.webp'} alt="Scrobble on the go" shrink round />
                             </Content>
                         </SideLeft>
                         <SideRight>
                             <Content>
-                                <Image src={'/scrobble.webp'} alt="Scrobble on the go" shrink round />
+                                <FeatureIcon icon={IconMusicPlus} large />
+                                <h2>Scrobble on the go</h2>
+                                <p>Connect your account to <em>scrobble on-site</em>, no externals required.<br />Additionally, navigate to someones page and hit <em>‘copy’ to clone the scrobble</em> with no extra typing required.</p>
                             </Content>
                         </SideRight>
                     </Content>
@@ -188,11 +206,6 @@ export default function Home() {
             <Section alternate>
                 <Content column={false} outer>
                     <SideLeft span>
-                        <Content>
-                            <Image src={'/sponsor.webp'} alt="Sponsors get rewards" shrink round />
-                        </Content>
-                    </SideLeft>
-                    <SideRight>
                         <Content>
                             <h2>Sponsors get rewards</h2>
                             <FeatureList>
@@ -209,6 +222,11 @@ export default function Home() {
                                     Choose a <em>custom badge</em> to show on your avatar when sponsoring monthly. You can choose the icon, colour, and text.
                                 </Feature>
                             </FeatureList>
+                        </Content>
+                    </SideLeft>
+                    <SideRight>
+                        <Content>
+                            <Image src={'/sponsor.webp'} alt="Sponsors get rewards" shrink round />
                         </Content>
                     </SideRight>
                 </Content>

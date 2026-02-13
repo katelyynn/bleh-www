@@ -91,28 +91,39 @@ export function InstallWizard({
                 <div className={styles.content}>
                     {content.body}
                 </div>
-                <WizardStepFooter prev={prev} next={next} nextDisabled={nextDisabled} />
+                <WizardStepFooter step={step} prev={prev} next={next} nextDisabled={nextDisabled} />
             </>
         )
     }
 
     interface WizardStepFooterProps {
+        step: number,
         prev: number,
         next: number,
         nextDisabled: boolean
     }
 
     function WizardStepFooter({
+        step,
         prev,
         next,
         nextDisabled = false
     }: WizardStepFooterProps) {
         return (
             <div className={styles.footer}>
-                <Button onClick={() => setStep(prev)}>
-                    <IconChevronLeft size={14} />
-                    Back
-                </Button>
+                {step == 0 ? (
+                    <Dialog.Close asChild>
+                        <Button onClick={() => setStep(prev)}>
+                            <IconChevronLeft size={14} />
+                            Back
+                        </Button>
+                    </Dialog.Close>
+                ): (
+                    <Button onClick={() => setStep(prev)}>
+                        <IconChevronLeft size={14} />
+                        Back
+                    </Button>
+                )}
                 <Button primary onClick={() => setStep(next)} disabled={nextDisabled}>
                     Next
                     <IconChevronRight size={14} />
