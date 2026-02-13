@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./wizard.module.css";
 import { Button, ButtonRow } from "../button/button";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import { BrowserListHelper, ExtensionList } from "../browser/browser";
+import { browserKey, BrowserListHelper, ExtensionList } from "../browser/browser";
 import { Image, ImageRow } from "../image/image";
 
 interface InstallWizardProps {
@@ -16,7 +16,7 @@ export function InstallWizard({
     children
 }: InstallWizardProps) {
     const [step, setStep] = useState(0);
-    const [selectedBrowser, setSelectedBrowser] = useState("");
+    const [selectedBrowser, setSelectedBrowser] = useState<browserKey>("chrome");
     const [selectedExtension, setSelectedExtension] = useState("");
 
     const [open, setOpen] = useState(false);

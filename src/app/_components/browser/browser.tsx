@@ -5,7 +5,7 @@ import styles from "./browser.module.css";
 import { ComponentPropsWithoutRef } from "react";
 
 interface BrowserListHelperProps {
-    selectedBrowser: string,
+    selectedBrowser: browserKey,
     setSelectedBrowser: Function,
     setStep: Function
 }
@@ -15,7 +15,7 @@ export function BrowserListHelper({
     setSelectedBrowser,
     setStep
 }: BrowserListHelperProps) {
-    let browsers = [
+    let browsers: browserKey[] = [
         "chrome",
         "firefox",
         "safari"
@@ -126,13 +126,13 @@ function Browser({
 }
 
 interface ExtensionListProps {
-    browser: string,
+    browser: browserKey,
     selectedExtension: string,
     setSelectedExtension: Function,
     setStep: Function
 }
 
-type browserKey = "chrome" | "firefox" | "safari";
+export type browserKey = "chrome" | "firefox" | "safari";
 
 interface ExtensionItemProps {
     name: string,
