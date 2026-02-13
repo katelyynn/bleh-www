@@ -122,7 +122,7 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft span>
                             <Content>
-                                <Image src={'/banner.webp'} alt="Make your profile feel home" shrink round />
+                                <Image src={'/banner_2.webp'} alt="Make your profile feel home" shrink round />
                             </Content>
                         </SideLeft>
                         <SideRight>
