@@ -8,6 +8,11 @@
     align-items: center;
     position: relative;
     gap: 15px 80px;
+
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        gap: 40px 80px;
+    }
 }
 
 .col {
@@ -21,11 +26,20 @@
 .side {
     overflow: hidden;
     width: 570px;
+
+    @media (max-width: 1300px) {
+        max-width: 90vw;
+        width: 100%;
+    }
 }
 
 .span {
     flex: 1;
     width: 100%;
+
+    @media (max-width: 1300px) {
+        order: -1;
+    }
 }
 
 .card {
@@ -34,4 +48,8 @@
     background-color: hsl(var(--b5));
     border: 1px solid hsl(var(--b3));
     border-radius: 14px;
+
+    @media (max-width: 1300px) {
+        margin: unset;
+    }
 }

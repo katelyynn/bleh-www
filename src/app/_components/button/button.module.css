@@ -57,6 +57,12 @@
     --lit-over: 1.1;
 }
 
+.discord {
+    --hue-over: 235;
+    --sat-over: 1.4;
+    --lit-over: 1;
+}
+
 .primary {
     --bg: hsl(var(--h3));
     --bg-hov: color-mix(in hsl, hsl(var(--h4)), hsl(var(--h3)) 80%);
@@ -70,7 +76,12 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 
     margin-top: 20px;
+
+    @media (max-width: 1300px) {
+        justify-content: center;
+    }
 }

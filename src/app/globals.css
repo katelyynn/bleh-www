@@ -324,6 +324,13 @@ br {
     --mask: linear-gradient(90deg, transparent 0%, white 30%, white 70%, transparent 100%);
     mask-image: var(--mask);
     -webkit-mask-image: var(--mask);
+
+    @media (max-width: 1300px) {
+        top: -100px;
+        left: 0;
+        right: 0;
+        opacity: 0.6;
+    }
 }
 
 
@@ -337,6 +344,14 @@ br {
             scale: 0.9;
             opacity: 0.7;
         }
+    }
+}
+
+@media (max-width: 1300px) {
+    .react-slideshow-container {
+        overflow: hidden;
+        width: 90vw;
+        margin: 0 auto;
     }
 }
 

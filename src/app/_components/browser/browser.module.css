@@ -78,4 +78,8 @@
     color: hsl(var(--l2-c));
 
     width: 600px;
+
+    @media (max-width: 1300px) {
+        width: 80vw;
+    }
 }

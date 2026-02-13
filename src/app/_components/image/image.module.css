@@ -7,6 +7,10 @@
         height: 100%;
         object-fit: contain;
     }
+
+    @media (max-width: 1300px) {
+        max-height: 250px;
+    }
 }
 
 .shrink {

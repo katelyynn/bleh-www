@@ -5,6 +5,7 @@ import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
 type ButtonProps = {
     sponsor?: boolean,
+    discord?: boolean,
     colourful?: boolean,
     link?: string,
     primary?: boolean,
@@ -17,6 +18,7 @@ export const Button = forwardRef<
     ButtonProps
 >(function Button({
     sponsor,
+    discord,
     colourful,
     link,
     primary = false,
@@ -25,7 +27,7 @@ export const Button = forwardRef<
 }, ref) {
     if (link) {
         return (
-            <a className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''}`} ref={ref as React.Ref<HTMLAnchorElement>} href={link} target="_blank" {...props}>
+            <a className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''} ${discord ? styles.discord : ''}`} ref={ref as React.Ref<HTMLAnchorElement>} href={link} target="_blank" {...props}>
                 {children}
             </a>
         )

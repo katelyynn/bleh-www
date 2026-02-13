@@ -25,11 +25,23 @@
     &[data-state="closed"] {
         animation: close 0.2s var(--trans-function-ani);
     }
+
+    @media (max-width: 1300px) {
+        width: 90vw;
+        max-width: 90vw;
+    }
 }
 
 .content {
     min-width: 600px;
     min-height: 400px;
+
+    @media (max-width: 1300px) {
+        min-width: unset;
+
+        max-width: 80vw;
+        max-height: 90vw;
+    }
 }
 
 .footer {

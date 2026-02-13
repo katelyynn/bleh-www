@@ -1,4 +1,4 @@
-import { IconBadgesFilled, IconBlocks, IconBrush, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLanguage, IconLanguageHiragana, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
+import { IconBadgesFilled, IconBlocks, IconBrandDiscordFilled, IconBrush, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconHeartFilled, IconLabel, IconLanguage, IconLanguageHiragana, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
 import { Brand } from "./_components/brand/brand";
 import { Card, Content, SideLeft, SideRight } from "./_components/content/content";
 import { Feature, FeatureIcon, FeatureList } from "./_components/feature/feature";
@@ -28,8 +28,12 @@ export default function Home() {
                                     </Button>
                                 </InstallWizard>
                                 <Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
-                                    <IconHeart size={18} />
-                                    Become a sponsor
+                                    <IconHeartFilled size={18} />
+                                    Sponsor
+                                </Button>
+                                <Button link="https://discord.gg/xU9KxGQpVw" primary colourful discord>
+                                    <IconBrandDiscordFilled size={18} />
+                                    Discord
                                 </Button>
                             </ButtonRow>
                         </Content>
@@ -243,8 +247,12 @@ export default function Home() {
                             </Button>
                         </InstallWizard>
                         <Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
-                            <IconHeart size={18} />
-                            Become a sponsor
+                            <IconHeartFilled size={18} />
+                            Sponsor
+                        </Button>
+                        <Button link="https://discord.gg/xU9KxGQpVw" primary colourful discord>
+                            <IconBrandDiscordFilled size={18} />
+                            Discord
                         </Button>
                     </ButtonRow>
                 </Content>
