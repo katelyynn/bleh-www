@@ -8,4 +8,8 @@
 
     margin-top: 100px;
     cursor: default;
+
+    a:not(:hover) {
+        color: inherit !important;
+    }
 }
