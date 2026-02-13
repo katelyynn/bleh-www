@@ -8,6 +8,7 @@ import { Button, ButtonRow } from "./_components/button/button";
 import { BrowserButton } from "./_components/button/browser_button";
 import { Image } from "./_components/image/image";
 import { Slides } from "./_components/slides/slides";
+import { InstallWizard } from "./_components/wizard/wizard";
 
 export default function Home() {
     return (
@@ -20,7 +21,12 @@ export default function Home() {
                             <h1 className="brand">Music stats<br />viewed from<br />a new lens</h1>
                             <h3 style={{maxWidth: 400}}>A fresh coat of paint for Last.fm bringing you closer to the music that defines you</h3>
                             <ButtonRow>
-                                <BrowserButton />
+                                <InstallWizard>
+                                    <Button primary>
+                                        <IconDownload size={18} />
+                                        <BrowserButton />
+                                    </Button>
+                                </InstallWizard>
                                 <Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
                                     <IconHeart size={18} />
                                     Become a sponsor
@@ -212,7 +218,12 @@ export default function Home() {
                     <Brand />
                     <h2>Peaked your interest?</h2>
                     <ButtonRow>
-                        <BrowserButton />
+                        <InstallWizard>
+                            <Button primary>
+                                <IconDownload size={18} />
+                                <BrowserButton />
+                            </Button>
+                        </InstallWizard>
                         <Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
                             <IconHeart size={18} />
                             Become a sponsor

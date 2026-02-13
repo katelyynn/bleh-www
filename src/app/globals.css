@@ -100,10 +100,20 @@ body {
     --interactable-outer: 0 2px 4px hsla(var(--b7), 0.15);
     --interactable-active-outer: hsla(var(--c1), 0.03) 0 2px 25px 0;
 
+    --highlight-shadow: hsla(var(--b3), 0.25) 0 0 2px 1px;
+    --menu-shadow: 0 5px 15px 11px hsla(var(--b7), 0.4);
+    --overlay-shadow: 0 20px 40px 20px hsla(var(--b7), 0.4);
+    --menu-overlay-shadow: 0 -250px 10px 100px hsla(var(--b6), 70%);
+    --avatar-shadow: 0 6px 15px 10px hsla(var(--b7), 0.05);
+    --standout-shadow: 0 6px 20px 7px hsla(var(--b7), 0.2);
+    --subtle-shadow: 0 6px 20px 2px hsla(var(--b7), 0.2);
+
     --interact-shadow: var(--interactable-outer);
     --active-shadow:
         var(--interactable-outer), var(--interactable-active-outer);
+}
 
+body {
     &:after {
         content: "";
         display: block;
@@ -111,7 +121,7 @@ body {
         inset: 0;
         z-index: 9999999999999999999;
         pointer-events: none;
-        opacity: var(--noise-opacity, 0.2);
+        opacity: var(--noise-opacity, 0.35);
         mix-blend-mode: soft-light;
         background-image: var(--noise);
         background-repeat: repeat;

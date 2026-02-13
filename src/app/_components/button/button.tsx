@@ -1,38 +1,42 @@
 "use client";
 
 import styles from "./button.module.css";
-import React from "react";
+import React, { ComponentPropsWithoutRef, forwardRef } from "react";
 
-interface ButtonProps {
+type ButtonProps = {
     sponsor?: boolean,
     colourful?: boolean,
     link?: string,
     primary?: boolean,
     children: React.ReactNode
-}
+} & ComponentPropsWithoutRef<"button"> &
+  ComponentPropsWithoutRef<"a">
 
-export function Button({
+export const Button = forwardRef<
+    HTMLButtonElement | HTMLAnchorElement,
+    ButtonProps
+>(function Button({
     sponsor,
     colourful,
     link,
     primary = false,
     children,
     ...props
-}: ButtonProps) {
+}, ref) {
     if (link) {
         return (
-            <a className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''}`} href={link} target="_blank" {...props}>
+            <a className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''}`} ref={ref as React.Ref<HTMLAnchorElement>} href={link} target="_blank" {...props}>
                 {children}
             </a>
         )
     }
 
     return (
-        <button className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''}`} {...props}>
+        <button className={`${styles.button} ${primary ? styles.primary : ''} ${colourful ? 'colourful' : ''} ${sponsor ? styles.sponsor : ''}`} ref={ref as React.Ref<HTMLButtonElement>} type="button" {...props}>
             {children}
         </button>
     )
-}
+})
 
 interface ButtonRowProps {
     children: React.ReactNode
