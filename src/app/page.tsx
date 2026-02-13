@@ -1,4 +1,4 @@
-import { IconBadgesFilled, IconBlocks, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
+import { IconBadgesFilled, IconBlocks, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
 import { Brand } from "./_components/brand/brand";
 import { Card, Content, SideLeft, SideRight } from "./_components/content/content";
 import { Feature, FeatureIcon, FeatureList } from "./_components/feature/feature";
@@ -127,14 +127,14 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft span>
                             <Content>
-                                <FeatureIcon icon={IconUsersGroup} large />
-                                <h2>Stay connected</h2>
-                                <p>Add people as <em>close friends</em> to keep updated on their recent listening.<br />Select one as a special <em>‘starred friend’</em> to view their scrobbles alongside yours everywhere.</p>
+                                <FeatureIcon icon={IconLayout2Filled} large />
+                                <h2>Collage your music</h2>
+                                <p>Say goodbye to requiring external tools for <em>making album collages</em>, bleh has it covered. You can generate with preset timestamps (for now) for <em>artists, albums, and even tracks</em>.<br />You can even pick <em>a specific size</em> in width and height you’re after.</p>
                             </Content>
                         </SideLeft>
                         <SideRight>
                             <Content>
-                                <Image src={'/close_friends.webp'} alt="Stay connected" shrink />
+                                <Image src={'/collage.webp'} alt="Collage your music" shrink round />
                             </Content>
                         </SideRight>
                     </Content>
@@ -145,14 +145,32 @@ export default function Home() {
                     <Content column={false} outer>
                         <SideLeft>
                             <Content>
-                                <Image src={'/scrobble.webp'} alt="Scrobble on the go" shrink round />
+                                <Image src={'/close_friends.webp'} alt="Stay connected" shrink />
                             </Content>
                         </SideLeft>
                         <SideRight span>
                             <Content>
+                                <FeatureIcon icon={IconUsersGroup} large />
+                                <h2>Stay connected</h2>
+                                <p>Add people as <em>close friends</em> to keep updated on their recent listening.<br />Select one as a special <em>‘starred friend’</em> to view their scrobbles alongside yours everywhere.</p>
+                            </Content>
+                        </SideRight>
+                    </Content>
+                </Card>
+            </Section>
+            <Section>
+                <Card>
+                    <Content column={false} outer>
+                        <SideLeft span>
+                            <Content>
                                 <FeatureIcon icon={IconMusicPlus} large />
                                 <h2>Scrobble on the go</h2>
                                 <p>Connect your account to <em>scrobble on-site</em>, no externals required.<br />Additionally, navigate to someones page and hit <em>‘copy’ to clone the scrobble</em> with no extra typing required.</p>
+                            </Content>
+                        </SideLeft>
+                        <SideRight>
+                            <Content>
+                                <Image src={'/scrobble.webp'} alt="Scrobble on the go" shrink round />
                             </Content>
                         </SideRight>
                     </Content>
@@ -160,7 +178,12 @@ export default function Home() {
             </Section>
             <Section alternate>
                 <Content column={false} outer>
-                    <SideLeft>
+                    <SideLeft span>
+                        <Content>
+                            <Image src={'/sponsor.webp'} alt="Sponsors get rewards" shrink round />
+                        </Content>
+                    </SideLeft>
+                    <SideRight>
                         <Content>
                             <h2>Sponsors get rewards</h2>
                             <FeatureList>
@@ -177,11 +200,6 @@ export default function Home() {
                                     Choose a <em>custom badge</em> to show on your avatar when sponsoring monthly. You can choose the icon, colour, and text.
                                 </Feature>
                             </FeatureList>
-                        </Content>
-                    </SideLeft>
-                    <SideRight span>
-                        <Content>
-                            <Image src={'/sponsor.webp'} alt="Sponsors get rewards" shrink round />
                         </Content>
                     </SideRight>
                 </Content>
