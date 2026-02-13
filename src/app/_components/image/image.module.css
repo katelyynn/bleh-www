@@ -4,7 +4,6 @@
     align-items: center;
 
     img {
-        width: 100%;
         height: 100%;
         object-fit: contain;
     }
@@ -12,4 +11,13 @@
 
 .shrink {
     height: 300px;
+}
+
+.round {
+    border-radius: 14px;
+    overflow: hidden;
+
+    img {
+        border-radius: inherit;
+    }
 }

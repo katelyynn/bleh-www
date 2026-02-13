@@ -4,7 +4,7 @@ import React from "react";
 export function Footer() {
     return (
         <section className={styles.footer}>
-            footer 2026
+            katelyn 2023-2026
         </section>
     )
 }

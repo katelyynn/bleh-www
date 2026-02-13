@@ -14,7 +14,8 @@
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-device-detect": "^2.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-slideshow-image": "^4.3.2"
   },
   "devDependencies": {
     "@types/node": "^20",

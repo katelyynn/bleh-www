@@ -2,18 +2,20 @@ import styles from "./image.module.css";
 import React from "react";
 
 interface ImageProps {
+    round?: boolean,
     shrink?: boolean,
     src: string,
     alt: string
 }
 
 export function Image({
+    round = true,
     shrink = false,
     src,
     alt
 }: ImageProps) {
     return (
-        <div className={`${styles.image} ${shrink ? styles.shrink: ''}`}>
+        <div className={`${styles.image} ${shrink ? styles.shrink: ''} ${round ? styles.round : ''}`}>
             <img src={src} alt={alt} />
         </div>
     )

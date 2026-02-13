@@ -7,6 +7,7 @@
     width: var(--content-width);
     align-items: center;
     position: relative;
+    gap: 15px 80px;
 }
 
 .col {

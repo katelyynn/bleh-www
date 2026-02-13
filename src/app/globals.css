@@ -111,7 +111,7 @@ body {
         inset: 0;
         z-index: 9999999999999999999;
         pointer-events: none;
-        opacity: var(--noise-opacity, 0.35);
+        opacity: var(--noise-opacity, 0.2);
         mix-blend-mode: soft-light;
         background-image: var(--noise);
         background-repeat: repeat;
@@ -276,8 +276,8 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: var(--font-weight-bold);
 }
 
@@ -312,4 +312,22 @@ br {
     --mask: linear-gradient(90deg, transparent 0%, white 30%, white 70%, transparent 100%);
     mask-image: var(--mask);
     -webkit-mask-image: var(--mask);
+}
+
+
+.images-wrap {
+    & > div {
+        transition-property: scale, opacity;
+        transition-duration: var(--trans);
+        transition-timing-function: var(--trans-function-ani);
+
+        &:not(.active) {
+            scale: 0.9;
+            opacity: 0.7;
+        }
+    }
+}
+
+.each-slideshow-indicator:before {
+    background: hsl(var(--c2)) !important;
 }
