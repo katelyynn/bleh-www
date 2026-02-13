@@ -8,7 +8,7 @@
 
     appearance: none;
     background-color: var(--bg);
-    color: var(--col);
+    color: var(--col) !important;
     box-shadow: var(--shadow);
     border: none;
 

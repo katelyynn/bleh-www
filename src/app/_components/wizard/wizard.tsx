@@ -80,6 +80,7 @@ export function InstallWizard({
 
     useEffect(() => {
         if (step == 3) {
+            has_opened_setup.current = false;
             if (!has_opened.current) {
                 window.open(
                     `https://github.com/katelyynn/bleh/raw/uwu/fm/bleh.user.js?${Math.random()}`,
@@ -101,6 +102,7 @@ export function InstallWizard({
             }
         } else {
             has_opened.current = false;
+            has_opened_setup.current = false;
         }
     }, [step]);
 
