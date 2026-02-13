@@ -15,6 +15,7 @@ export function InstallWizard({
     children
 }: InstallWizardProps) {
     const [step, setStep] = useState(0);
+    const [selectedBrowser, setSelectedBrowser] = useState("");
 
     const steps = [
         {
@@ -22,14 +23,16 @@ export function InstallWizard({
             body:
                 <>
                     <p>If you aren’t sure, go with Chrome - it’s a safe bet.</p>
-                    <BrowserListHelper />
-                </>
+                    <BrowserListHelper selectedBrowser={selectedBrowser} setSelectedBrowser={setSelectedBrowser} setStep={setStep} />
+                </>,
+            next: false
         },
         {
             title: 'Choose an extension manager',
             body:
                 <>
                     <p>Pick a userscript manager that will handle loading bleh for you.</p>
+                    <p>browser is {selectedBrowser}</p>
                 </>
         },
         {
@@ -76,6 +79,7 @@ export function InstallWizard({
         if (next > steps.length - 1) next = steps.length - 1;
 
         const content = steps[step];
+        const nextDisabled = content.next && false;
 
         return (
             <>
@@ -85,7 +89,7 @@ export function InstallWizard({
                 <div className={styles.content}>
                     {content.body}
                 </div>
-                <WizardStepFooter prev={prev} next={next} />
+                <WizardStepFooter prev={prev} next={next} nextDisabled={nextDisabled} />
             </>
         )
     }
@@ -97,7 +101,8 @@ export function InstallWizard({
 
     function WizardStepFooter({
         prev,
-        next
+        next,
+        nextDisabled = false
     }: WizardStepFooterProps) {
         return (
             <div className={styles.footer}>
@@ -105,7 +110,7 @@ export function InstallWizard({
                     <IconChevronLeft size={14} />
                     Back
                 </Button>
-                <Button primary onClick={() => setStep(next)}>
+                <Button primary onClick={() => setStep(next)} disabled={nextDisabled}>
                     Next
                     <IconChevronRight size={14} />
                 </Button>

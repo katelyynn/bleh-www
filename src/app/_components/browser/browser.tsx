@@ -2,11 +2,19 @@
 
 import { browserName, isIOS } from "react-device-detect";
 import styles from "./browser.module.css";
-import { ComponentPropsWithoutRef, useState } from "react";
+import { ComponentPropsWithoutRef } from "react";
 
-export function BrowserListHelper() {
-    const [selectedBrowser, setSelectedBrowser] = useState("");
+interface BrowserListHelperProps {
+    selectedBrowser: string,
+    setSelectedBrowser: Function,
+    setStep: Function
+}
 
+export function BrowserListHelper({
+    selectedBrowser,
+    setSelectedBrowser,
+    setStep
+}: BrowserListHelperProps) {
     let browsers = [
         "chrome",
         "firefox",
@@ -59,17 +67,14 @@ export function BrowserListHelper() {
         return (
             <>
                 <div className={styles.list}>
-                    <Browser browser={standardised_browser} onClick={() => setSelectedBrowser(standardised_browser)} />
+                    <Browser browser={standardised_browser} onClick={() => setBrowser(standardised_browser)} />
                 </div>
                 <p className={styles.browser_tip}>
                     It looks like you’re using {browser}, which is {standardised_browser}-like.
                 </p>
                 <div className={styles.list}>
-                    {browsers.map((b, i) => <Browser browser={b} key={i} onClick={() => setSelectedBrowser(b)} />)}
+                    {browsers.map((b, i) => <Browser browser={b} key={i} onClick={() => setBrowser(b)} />)}
                 </div>
-                <p className={styles.browser_tip}>
-                    You have chosen {selectedBrowser}
-                </p>
             </>
         )
     }
@@ -77,11 +82,8 @@ export function BrowserListHelper() {
     return (
         <>
             <div className={styles.list}>
-                {browsers.map((b, i) => <Browser browser={b} key={i} onClick={() => setSelectedBrowser(b)} />)}
+                {browsers.map((b, i) => <Browser browser={b} key={i} onClick={() => setBrowser(b)} />)}
             </div>
-            <p className={styles.browser_tip}>
-                You have chosen {selectedBrowser}
-            </p>
         </>
     )
 
@@ -99,6 +101,11 @@ export function BrowserListHelper() {
 
     function isSafari(browser: string) {
         return safari_browsers.includes(browser);
+    }
+
+    function setBrowser(browser: string) {
+        setSelectedBrowser(browser);
+        setStep(1);
     }
 }
 
