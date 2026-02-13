@@ -76,4 +76,6 @@
     background-color: hsl(var(--f4), 20%);
     border-radius: 14px;
     color: hsl(var(--l2-c));
+
+    width: 600px;
 }

@@ -21,3 +21,13 @@
         box-shadow: var(--avatar-shadow);
     }
 }
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .image {
+        height: 300px;
+    }
+}

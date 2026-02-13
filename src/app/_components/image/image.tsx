@@ -20,3 +20,17 @@ export function Image({
         </div>
     )
 }
+
+interface ImageRowProps {
+    children: React.ReactNode
+}
+
+export function ImageRow({
+    children
+}: ImageRowProps) {
+    return (
+        <div className={styles.row}>
+            {children}
+        </div>
+    )
+}

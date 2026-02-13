@@ -78,6 +78,8 @@ body {
     color-scheme: dark;
     accent-color: hsl(var(--l3-c));
 
+    text-underline-offset: 3px;
+
     --hue: var(
         --hue-over,
         var(--hue-album, var(--hue-user, var(--hue-seasonal, 255)))
@@ -345,4 +347,12 @@ br {
 img {
     user-select: none;
     pointer-events: none;
+}
+
+a {
+    color: hsl(var(--l3-c));
+
+    &:hover {
+        color: hsl(var(--l2-c));
+    }
 }

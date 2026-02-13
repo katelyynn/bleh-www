@@ -1,11 +1,12 @@
 "use client";
 
 import { Dialog } from "radix-ui";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./wizard.module.css";
 import { Button, ButtonRow } from "../button/button";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { BrowserListHelper, ExtensionList } from "../browser/browser";
+import { Image, ImageRow } from "../image/image";
 
 interface InstallWizardProps {
     children: React.ReactNode
@@ -17,6 +18,8 @@ export function InstallWizard({
     const [step, setStep] = useState(0);
     const [selectedBrowser, setSelectedBrowser] = useState("");
     const [selectedExtension, setSelectedExtension] = useState("");
+
+    const [open, setOpen] = useState(false);
 
     const steps = [
         {
@@ -41,13 +44,69 @@ export function InstallWizard({
             title: 'Almost there',
             body:
                 <>
-                    <p>Once you have the extension from before installed, click below to install bleh.</p>
+                    {selectedBrowser == "chrome" ? (
+                        <>
+                            <p>Due to restrictions from Chrome-like browsers, you must first go into your extension settings and enable userscripts.</p>
+                            <br /><br /><br /><br />
+                            <ImageRow>
+                                <Image src="/manage-ext.jpg" alt="Manage extension" round />
+                                <Image src="/allow-scripts.jpg" alt="Allow userscripts" round />
+                            </ImageRow>
+                            <br /><br /><br /><br />
+                            <p>Once you have done so, you can continue to install bleh.</p>
+                        </>
+                    ): (
+                        <p>Once you are ready, hit next to install bleh.</p>
+                    )}
                 </>
+        },
+        {
+            title: 'Ready to go',
+            body:
+                <>
+                    <p>bleh should now be installed! You can head into the setup below by hitting next.</p>
+                    <br /><br /><br /><br />
+                    <p>If you run into any issues, don’t hesitate to <a href="https://discord.gg/xU9KxGQpVw" target="_blank">join the Discord</a>.</p>
+                </>
+        },
+        {
+            title: '',
+            body: <></>
         }
     ]
 
+    const has_opened = useRef(false);
+    const has_opened_setup = useRef(false);
+
+    useEffect(() => {
+        if (step == 3) {
+            if (!has_opened.current) {
+                window.open(
+                    `https://github.com/katelyynn/bleh/raw/uwu/fm/bleh.user.js?${Math.random()}`,
+                    "_blank"
+                );
+                has_opened.current = true;
+            }
+        } else if (step == 4) {
+            has_opened.current = false;
+            if (!has_opened_setup.current) {
+                window.open(
+                    `https://last.fm/bleh/setup`,
+                    "_blank"
+                );
+                has_opened_setup.current = true;
+                setOpen(false);
+                setStep(0);
+                return;
+            }
+        } else {
+            has_opened.current = false;
+        }
+    }, [step]);
+
     return (
-        <Dialog.Root onOpenChange={(open) => {
+        <Dialog.Root open={open} onOpenChange={(open) => {
+            setOpen(open);
             if (!open) setStep(0);
         }}>
             <Dialog.Trigger asChild>{children}</Dialog.Trigger>
