@@ -238,7 +238,7 @@ export default function Home() {
             <Section>
                 <Content outer>
                     <Brand />
-                    <h2>Peaked your interest?</h2>
+                    <h2>Looking interesting?</h2>
                     <ButtonRow>
                         <InstallWizard>
                             <Button primary>
