@@ -43,6 +43,7 @@
 
     width: fit-content;
     text-decoration: none;
+    user-select: none;
 }
 
 .sponsor {

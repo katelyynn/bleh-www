@@ -1,4 +1,4 @@
-import { IconBadgesFilled, IconBlocks, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
+import { IconBadgesFilled, IconBlocks, IconClearFormatting, IconDisc, IconDownload, IconDroplet, IconHeart, IconLabel, IconLanguage, IconLanguageHiragana, IconLayout2, IconLayout2Filled, IconMessage2, IconMusicPlus, IconProgressCheck, IconUsersGroup } from "@tabler/icons-react";
 import { Brand } from "./_components/brand/brand";
 import { Card, Content, SideLeft, SideRight } from "./_components/content/content";
 import { Feature, FeatureIcon, FeatureList } from "./_components/feature/feature";
@@ -73,13 +73,16 @@ export default function Home() {
                         <Content>
                             <FeatureList>
                                 <Feature icon={IconDroplet} title="Choose your style">
-                                    Enjoy a range of five themes from the brightest to the darkest.<br />Find the colour that suits you best from a wide range of presets, seasonal events, and a customiser to fine-tune.
+                                    Enjoy a range of five themes from the <em>brightest to the darkest</em>.<br />Find the <em>colour that suits you best</em> from a wide range of presets, seasonal events, and a customiser to fine-tune.
                                 </Feature>
                                 <Feature icon={IconBlocks} title="Built from experience">
-                                    Every page has been restructured based on my own experiences using Last.fm through the years, so hopefully it’ll feel better for you too.
+                                    Every page has been restructured based on <em>my own experiences</em> using Last.fm through the years, so hopefully it’ll feel better for you too.
                                 </Feature>
                                 <Feature icon={IconProgressCheck} title="Frequently updated">
-                                    The update checker helps you have a bug-free and feature-full time.<br />Changelogs are included to keep you in the loop on what’s happening.
+                                    The update checker helps you have a <em>bug-free and feature-full</em> time.<br />Changelogs are included to keep you in the loop on what’s happening.
+                                </Feature>
+                                <Feature icon={IconLanguage} title="In-built translations">
+                                    The whole of bleh is built to support <em>community-contributed translations</em>, matching every language Last.fm provides as an option.
                                 </Feature>
                             </FeatureList>
                         </Content>

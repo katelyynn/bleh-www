@@ -331,3 +331,8 @@ br {
 .each-slideshow-indicator:before {
     background: hsl(var(--c2)) !important;
 }
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
