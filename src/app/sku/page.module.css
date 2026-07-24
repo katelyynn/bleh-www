@@ -1,0 +1,22 @@
+.input {
+    appearance: none;
+    font: inherit;
+    border: none;
+    background: hsl(var(--b3));
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 14px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 20px;
+}
+
+.sku {
+    opacity: 0.6;
+}
