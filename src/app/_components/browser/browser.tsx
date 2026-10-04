@@ -70,7 +70,7 @@ export function BrowserListHelper({
 					<Browser browser={standardised_browser} onClick={() => setBrowser(standardised_browser)} />
 				</div>
 				<p className={styles.browser_tip}>
-					It looks like you’re using {browser} or something similar to it.
+					It looks like you’re using <i>{browser}</i> or something similar to it.
 				</p>
 				<div className={styles.list}>
 					{browsers.map((b, i) => <Browser browser={b} key={i} onClick={() => setBrowser(b)} />)}

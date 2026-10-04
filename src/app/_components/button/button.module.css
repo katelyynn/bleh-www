@@ -1,87 +1,87 @@
 .button {
-    --bg: hsl(var(--b3));
-    --bg-hov: color-mix(in hsl, hsl(var(--b6)), hsl(var(--b3)) 80%);
-    --bg-atv: color-mix(in hsl, hsl(var(--b6)), hsl(var(--b3)) 60%);
-    --col: hsl(var(--c2));
-    --mask-colour: color-mix(in hsl, hsl(var(--c2)), hsl(var(--c3)) 50%);
-    --shadow: var(--normal-shadow), var(--interact-shadow);
+	--bg: oklch(var(--b3));
+	--bg-hov: color-mix(in oklch, oklch(var(--b6)), oklch(var(--b3)) 80%);
+	--bg-atv: color-mix(in oklch, oklch(var(--b6)), oklch(var(--b3)) 60%);
+	--col: oklch(var(--c2));
+	--mask-colour: color-mix(in oklch, oklch(var(--c2)), oklch(var(--c3)) 50%);
+	--shadow: var(--normal-shadow), var(--interact-shadow);
 
-    appearance: none;
-    background-color: var(--bg);
-    color: var(--col) !important;
-    box-shadow: var(--shadow);
-    border: none;
+	appearance: none;
+	background-color: var(--bg);
+	color: var(--col) !important;
+	box-shadow: var(--shadow);
+	border: none;
 
-    padding: 9px 14px;
-    border-radius: 14px;
-    font-family: var(--font);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    font-weight: var(--font-weight-medium);
+	padding: 8px 12px;
+	border-radius: 10px;
+	font-family: var(--font);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	font-weight: var(--font-weight-medium);
 
-    transition-property: background-color, transform, box-shadow, color;
-    transition-duration: var(--trans);
-    transition-timing-function: var(--trans-function);
+	transition-property: background-color, transform, box-shadow, color;
+	transition-duration: var(--trans);
+	transition-timing-function: var(--trans-function);
 
-    &:hover {
-        background-color: var(--bg-hov);
+	&:hover {
+		background-color: var(--bg-hov);
 
-        transition-property: transform;
-        transition-duration: var(--trans);
-        transition-timing-function: var(--trans-function);
-    }
+		transition-property: transform;
+		transition-duration: var(--trans);
+		transition-timing-function: var(--trans-function);
+	}
 
-    &:active {
-        background-color: var(--bg-atv);
-        transform: scale(0.98);
-    }
+	&:active {
+		background-color: var(--bg-atv);
+		transform: scale(0.98);
+	}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
 
-    width: fit-content;
-    text-decoration: none;
-    user-select: none;
+	width: fit-content;
+	text-decoration: none;
+	user-select: none;
 
-    &[disabled] {
-        opacity: 0.6;
-        pointer-events: none;
-    }
+	&[disabled] {
+		opacity: 0.6;
+		pointer-events: none;
+	}
 }
 
 .sponsor {
-    --hue-over: 336;
-    --sat-over: 1.4;
-    --lit-over: 1.1;
+	--hue-over: 15;
+	--sat-over: 2;
+	--lit-over: 0.93;
 }
 
 .discord {
-    --hue-over: 235;
-    --sat-over: 1.4;
-    --lit-over: 1;
+	--hue-over: 273;
+	--sat-over: 3.2;
+	--lit-over: 0.87;
 }
 
 .primary {
-    --bg: hsl(var(--h3));
-    --bg-hov: color-mix(in hsl, hsl(var(--h4)), hsl(var(--h3)) 80%);
-    --bg-atv: color-mix(in hsl, hsl(var(--h4)), hsl(var(--h3)) 60%);
-    --col: hsl(var(--b7));
-    --mask-colour: hsl(var(--b7), 70%) !important;
-    --shadow:
-        var(--primary-shadow), 0 3px 12px hsl(var(--h4), 32%),
-        var(--interactable-outer);
+	--bg: oklch(var(--h3));
+	--bg-hov: color-mix(in oklch, oklch(var(--h4)), oklch(var(--h3)) 80%);
+	--bg-atv: color-mix(in oklch, oklch(var(--h4)), oklch(var(--h3)) 60%);
+	--col: oklch(var(--b7));
+	--mask-colour: oklch(var(--b7), 70%) !important;
+	--shadow:
+		var(--primary-shadow), 0 3px 12px oklch(var(--h4) / 32%),
+		var(--interactable-outer);
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
 
-    margin-top: 20px;
+	margin-top: 20px;
 
-    @media (max-width: 1300px) {
-        justify-content: center;
-    }
+	@media (max-width: 1300px) {
+		justify-content: center;
+	}
 }

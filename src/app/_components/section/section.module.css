@@ -1,16 +1,16 @@
 .section {
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-    overflow: hidden;
+	display: flex;
+	justify-content: center;
+	padding: 40px 0;
+	overflow: hidden;
 }
 
 .alternate {
-    background-color: hsl(var(--b5));
-    border-top: 1px solid hsl(var(--b3));
-    border-bottom: 1px solid hsl(var(--b3));
+	background-color: oklch(var(--b5));
+	border-top: 1px solid oklch(var(--b3));
+	border-bottom: 1px solid oklch(var(--b3));
 }
 
-.section:not(.alternate) + .section:not(.alternate) {
-    padding-top: 0;
+.section:not(.alternate)+.section:not(.alternate) {
+	padding-top: 0;
 }
