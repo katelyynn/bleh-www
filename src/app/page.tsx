@@ -78,9 +78,6 @@ export default function Home() {
 								}
 							]} />
 						</Content>
-						<div className="notice">
-							^screenshots are outdated as of october 2026
-						</div>
 					</SideLeft>
 					<SideRight>
 						<Content>
@@ -186,7 +183,7 @@ export default function Home() {
 						</SideLeft>
 						<SideRight span>
 							<Content>
-								<Image src={'/close_friends.webp'} alt="Stay connected" shrink />
+								<Image src={'/close_friends.webp'} alt="Stay connected" shrink round />
 							</Content>
 						</SideRight>
 					</Content>
