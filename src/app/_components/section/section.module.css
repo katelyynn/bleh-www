@@ -6,9 +6,10 @@
 }
 
 .alternate {
-	background-color: oklch(var(--b5));
-	border-top: 1px solid oklch(var(--b3));
-	border-bottom: 1px solid oklch(var(--b3));
+	background: linear-gradient(0deg, oklch(var(--k4) / 12%), oklch(var(--b5)));
+	border-top: 1px solid var(--card-border-base);
+	border-bottom: 1px solid var(--card-border-base);
+	box-shadow: var(--card-shadow);
 }
 
 .section:not(.alternate)+.section:not(.alternate) {

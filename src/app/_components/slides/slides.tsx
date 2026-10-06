@@ -8,25 +8,25 @@ import 'react-slideshow-image/dist/styles.css';
 import { Button } from "../button/button";
 
 interface SlidesProps {
-    images: Slide[]
+	images: Slide[]
 }
 
 interface Slide {
-    src: string,
-    alt: string
+	src: string,
+	alt: string
 }
 
 export function Slides({
-    images
+	images
 }: SlidesProps) {
-    return (
-        <div className={styles.slides}>
-            <Slide autoplay={true} arrows={false} indicators={true} canSwipe={true} transitionDuration={400} duration={10000} easing="cubic" prevArrow={<Button>back</Button>} nextArrow={<Button>next</Button>}>
-                {images.map((image, i) => <div className={styles.slide} key={i}>
-                    <Image src={image.src} alt={image.alt} round />
-                    <p className={styles.alt}>{image.alt}</p>
-                </div>)}
-            </Slide>
-        </div>
-    )
+	return (
+		<div className={styles.slides}>
+			<Slide autoplay={true} arrows={false} indicators={true} canSwipe={true} transitionDuration={400} duration={10000} easing="cubic" prevArrow={<Button>back</Button>} nextArrow={<Button>next</Button>} infinite>
+				{images.map((image, i) => <div className={styles.slide} key={i}>
+					<Image src={image.src} alt={image.alt} round />
+					<p className={styles.alt}>{image.alt}</p>
+				</div>)}
+			</Slide>
+		</div>
+	)
 }

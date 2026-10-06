@@ -9,6 +9,8 @@ import { BrowserButton } from "./_components/button/browser_button";
 import { Image } from "./_components/image/image";
 import { Slides } from "./_components/slides/slides";
 import { InstallWizard } from "./_components/wizard/wizard";
+import { Album2Regular, Chat1Regular, Download2Regular, Group2Regular, Mic2Regular } from '@mingcute/react/core-regular';
+import { DiscordFilled, Group2Filled, HeartFilled } from "@mingcute/react/core-filled";
 
 export default function Home() {
 	return (
@@ -23,16 +25,16 @@ export default function Home() {
 							<ButtonRow>
 								<InstallWizard>
 									<Button primary>
-										<IconDownload size={16} />
+										<Download2Regular size={18} />
 										<BrowserButton />
 									</Button>
 								</InstallWizard>
 								<Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
-									<IconHeartFilled size={16} />
+									<HeartFilled size={18} />
 									Sponsor
 								</Button>
 								<Button link="https://discord.gg/xU9KxGQpVw" primary colourful discord>
-									<IconBrandDiscordFilled size={16} />
+									<DiscordFilled size={18} />
 									Discord
 								</Button>
 							</ButtonRow>
@@ -104,7 +106,7 @@ export default function Home() {
 					<Content column={false} outer>
 						<SideLeft>
 							<Content>
-								<FeatureIcon icon={IconDisc} large />
+								<FeatureIcon icon={Album2Regular} large />
 								<h2>Reduce visual clutter</h2>
 								<p>Guest features and song tags are <em>automatically detected and treated</em> to let you focus on the actual music.<br />The <em>capitalisation of titles</em> can also be corrected via community contributions with bleh’s own system.</p>
 							</Content>
@@ -140,7 +142,7 @@ export default function Home() {
 					<Content column={false} outer>
 						<SideLeft>
 							<Content>
-								<FeatureIcon icon={IconMessage2} large />
+								<FeatureIcon icon={Chat1Regular} large />
 								<h2>Keep the conversation going</h2>
 								<p>Express yourself with native <em>Markdown integration</em> in shoutboxes and profile descriptions, including <em>images, line breaks, timestamps, text formatting</em> etc.<br />Additionally, see <em>shoutbox previews</em> return on music pages to get a snippet of what’s being discussed at the moment.</p>
 							</Content>
@@ -163,7 +165,7 @@ export default function Home() {
 						</SideLeft>
 						<SideRight>
 							<Content>
-								<FeatureIcon icon={IconLayout2Filled} large />
+								<FeatureIcon icon={Album2Regular} large />
 								<h2>Collage your music</h2>
 								<p>Say goodbye to requiring external tools for <em>making album collages</em>, bleh has it covered. You can generate with preset timestamps (for now) for <em>artists, albums, and even tracks</em>.<br />You can even pick <em>a specific size</em> in width and height you’re after.</p>
 							</Content>
@@ -176,7 +178,7 @@ export default function Home() {
 					<Content column={false} outer>
 						<SideLeft>
 							<Content>
-								<FeatureIcon icon={IconUsersGroup} large />
+								<FeatureIcon icon={Group2Filled} large />
 								<h2>Stay connected</h2>
 								<p>Add people as <em>close friends</em> to keep updated on their recent listening.<br />Select one as a special <em>‘starred friend’</em> to view their scrobbles alongside yours everywhere.</p>
 							</Content>
@@ -199,7 +201,7 @@ export default function Home() {
 						</SideLeft>
 						<SideRight>
 							<Content>
-								<FeatureIcon icon={IconMusicPlus} large />
+								<FeatureIcon icon={Mic2Regular} large />
 								<h2>Scrobble on the go</h2>
 								<p>Connect your account to <em>scrobble on-site</em>, no externals required.<br />Additionally, navigate to someones page and hit <em>‘copy’ to clone the scrobble</em> with no extra typing required.</p>
 							</Content>
@@ -242,16 +244,16 @@ export default function Home() {
 					<ButtonRow>
 						<InstallWizard>
 							<Button primary>
-								<IconDownload size={18} />
+								<Download2Regular size={18} />
 								<BrowserButton />
 							</Button>
 						</InstallWizard>
 						<Button link="https://katelyn.moe/sponsor" primary colourful sponsor>
-							<IconHeartFilled size={18} />
+							<HeartFilled size={18} />
 							Sponsor
 						</Button>
 						<Button link="https://discord.gg/xU9KxGQpVw" primary colourful discord>
-							<IconBrandDiscordFilled size={18} />
+							<DiscordFilled size={18} />
 							Discord
 						</Button>
 					</ButtonRow>

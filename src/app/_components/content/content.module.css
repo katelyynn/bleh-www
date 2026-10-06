@@ -47,6 +47,7 @@
 	margin: 0 -60px;
 	background-color: oklch(var(--b5));
 	border: 1px solid var(--card-border-base);
+	box-shadow: var(--card-shadow);
 	border-radius: 10px;
 
 	@media (max-width: 1300px) {
